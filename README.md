@@ -8,13 +8,14 @@ Please read [the docs](https://opentelemetry.io/docs/languages/kotlin/getting-st
 
 ### Supported targets
 
-| Platform          | Tier | Tests run in CI | Example app | Production use | Notes                                            |
-|-------------------|------|-----------------|-------------|----------------|--------------------------------------------------|
-| JVM               | 1    | ✅               | ✅           | ✅              | Heavily tested and supported for production use. |
-| Android (API 21+) | 1    | ✅               | ✅           | ✅              | Heavily tested and supported for production use. |
-| iOS               | 2    | ❌               | ✅           | ❌              | Compiles.                                        |
-| tvOS              | 2    | ❌               | ❌           | ❌              | Compiles.                                        |
-| JS                | 2    | ✅               | ✅           | ❌              | Compiles.                                        |
+| Platform              | Tier | Tests run in CI | Example app | Production use | Notes                                            |
+|-----------------------|------|-----------------|-------------|----------------|--------------------------------------------------|
+| JVM                   | 1    | ✅              | ✅          | ✅             | Heavily tested and supported for production use. |
+| Android (API 21+)     | 1    | ✅              | ✅          | ✅             | Heavily tested and supported for production use. |
+| iOS                   | 2    | ❌              | ✅          | ❌             | Compiles.                                        |
+| tvOS                  | 2    | ❌              | ❌          | ❌             | Compiles.                                        |
+| JS                    | 2    | ✅              | ✅          | ❌             | Compiles.                                        |
+| Linux (x64 and ARM64) | 2    | ✅              | ❌          | ❌             | Compiles.                                        |
 
 Tier 1 targets are best-supported for production use. Tier 2 targets compile and pass shared tests, but
 have received limited real-world testing. Support may be dropped for targets if their
