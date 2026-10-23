@@ -14,6 +14,9 @@ internal fun createTestHttpClient(
     engine: MockEngine,
     dispatcher: TestDispatcher,
 ): HttpClient {
+    if (!supportsHttpCompression) {
+        return createDefaultHttpClient(requestTimeoutMs, engine)
+    }
     val testGzip = object : ContentEncoder by GZipEncoder {
         override fun encode(source: ByteReadChannel, coroutineContext: CoroutineContext): ByteReadChannel =
             // Keep gzip on the test scheduler without replacing the request Job.
